@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Nachrichten</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+</head>
+
+<body>
+    <div id="nav">
+        <div class="w3-bar w3-blue">
+            <div class="w3-hide-large">
+                <a id="nav.hamburger" href="#" class="w3-bar-item w3-btn w3-padding-large">
+                    <i class="fa fa-bars"></i></a>
+            </div>
+            <span class="w3-bar-item w3-padding-12"><b>Nachrichten</b></span>
+            <div class="w3-hide-small w3-hide-medium">
+                <a href="#" id="nav.new" class="w3-bar-item w3-btn w3-padding-large">Neue Nachricht</a>
+                <a href="#" id="nav.all" class="w3-bar-item w3-btn w3-padding-large">Alle Nachrichten</a>
+            </div>
+        </div>
+
+        <nav id="nav.side-nav" class="w3-sidenav w3-blue-grey w3-animate-left" style="display: none; z-index: 9">
+            <a href="#" id="nav.side-nav.new">Neue Nachricht</a>
+            <a href="#" id="nav.side-nav.all">Alle Nachrichten</a>
+        </nav>
+
+        <div id="nav.overlay" class="w3-overlay"></div>
+    </div>
+
+    <div id="new-comp" class="w3-container" style="display:none">
+        <h5 class="w3-text-blue">Neue Nachricht</h5>
+        <label class="w3-text-blue">Text</label>
+        <input type="text" class="w3-input w3-border" id="new-comp.text" placeholder="Bitte Text eingeben.">
+        <div class="w3-margin-top">
+            <button id="new-comp.send-btn" class="w3-btn w3-blue">Senden</button>
+            <button id="new-comp.reset-btn" class="w3-btn w3-blue">Zurücksetzen</button>
+        </div>
+        <div id="new-comp.result" class="w3-margin-top"></div>
+    </div>
+
+    <div id="all-comp" class="w3-container" style="display:none">
+        <h5 class="w3-text-blue">Alle Nachrichten (Ändern/Löschen)</h5>
+        <div id="all-comp.result" class="w3-margin-top"></div>
+    </div>
+
+    <div id="detail-comp" class="w3-container" style="display:none">
+        <h5 class="w3-text-blue">Nachricht ändern/löschen</h5>
+        <label class="w3-text-blue">Id</label>
+        <input type="text" id="detail-comp.id" class="w3-input w3-border" readonly>
+        <div class="w3-margin-top">
+            <label class="w3-text-blue">Text</b></label>
+            <input type="text" id="detail-comp.text" class="w3-input w3-border" placeholder="Bitte Text eingeben.">
+        </div>
+        <div class="w3-margin-top">
+            <label class="w3-text-blue">Timestamp</label>
+            <input type="text" id="detail-comp.timestamp" class="w3-input w3-border" readonly>
+        </div>
+        <div class="w3-margin-top">
+            <button id="detail-comp.update-btn" class="w3-btn w3-blue">Ändern</button>
+            <button id="detail-comp.delete-btn" class="w3-btn w3-blue">Löschen</button>
+            <button id="detail-comp.back-btn" class="w3-btn w3-blue">Zurück</button>
+        </div>
+        <div id="detail-comp.result" class="w3-margin-top"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Neue Nachricht</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/w3.css" />
+</head>
+
+<body>
+    <div class="w3-container">
+        <h5 class="w3-text-blue">Neue Nachricht</h5>
+        <form action="rest/messages" method="POST">
+            <label class="w3-text-blue">Text</label>
+            <input type="text" name="text" class="w3-input w3-border" placeholder="Bitte Text eingeben." required>
+            <div class="w3-margin-top">
+                <input type="submit" class="w3-btn w3-blue" value="Senden">
+                <input type="reset" class="w3-btn w3-blue" value="Zurücksetzen">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

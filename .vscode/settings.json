@@ -1,0 +1,14 @@
+{
+    "java.project.sourcePaths": [
+        "rest_example_messages/src",
+        "rest_example_sensor/src"
+    ],
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar"
+        ],
+        "exclude": [
+            "libs/jaxb-ri-2.3.1/jaxb-ri/mod/jaxb-api.jar"
+        ]
+    }
+}
