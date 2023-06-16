@@ -14,12 +14,12 @@ public class Server {
 	public static void main(String[] args) throws Exception {
 		Logger.getLogger("org.glassfish").setLevel(Level.SEVERE);
 
-		URI baseUri = new URI("http://0.0.0.0:8080/demo");
+		URI baseUri = new URI("http://0.0.0.0:8080/");
 		ResourceConfig config = ResourceConfig.forApplicationClass(MyApplication.class);
 		HttpServer server = GrizzlyHttpServerFactory.createHttpServer(baseUri, config);
 
-		System.out.println("http://localhost:8080/demo/");
-		System.out.println("ENTER stoppt den Server.");
+		System.out.println("http://localhost:8080/robot/battery");
+		System.out.println("ENTER stops the Server.");
 		System.in.read();
 		server.shutdownNow();
 	}

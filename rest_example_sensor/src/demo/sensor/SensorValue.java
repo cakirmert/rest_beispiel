@@ -5,23 +5,25 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.Instant;
 
-@XmlRootElement
+@XmlRootElement(name = "battery")
 public class SensorValue {
 	@XmlElement
 	@XmlJavaTypeAdapter(MyInstantAdapter.class)
 	public Instant time;
+	@XmlElement
 	public double value;
+	@XmlElement
+	public double capacity;
 
 	public SensorValue() {
 		time = Instant.now();
-		value = Math.random() * 100;
+		value = 100;
+		capacity = 0;
 	}
 
-	@Override
-	public String toString() {
-		return "SensorValue{" +
-				"time=" + time +
-				", value=" + value +
-				'}';
+	public SensorValue(double capacity, double value) {
+		this();
+		this.capacity = capacity;
+		this.value = value;
 	}
 }
